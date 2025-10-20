@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 
 // This script runs on a server (GitHub Actions), not in the browser.
 // It's safe to use secrets here, as they are loaded from environment variables.

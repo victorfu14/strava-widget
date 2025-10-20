@@ -7,6 +7,7 @@
     "start": "node fetch-stats.js"
   },
   "dependencies": {
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^2.7.0",
+    "dotenv": "^16.6.1"
   }
 }

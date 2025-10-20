@@ -55,7 +55,7 @@ function displayStats(stats) {
         <hr style="border:0; border-top: 1px solid #eee; margin: 20px 0;">
 
         <div class="stat">
-            <img src=""img/swimming.gif" class="stat-icon" alt="Swimming icon">
+            <img src="img/swimming.gif" class="stat-icon" alt="Swimming icon">
             <div class="stat-label">Swim Distance</div>
             <div class="stat-value">${stats.swim_dist}<span class="stat-unit"> km</span></div>
         </div>
@@ -64,7 +64,7 @@ function displayStats(stats) {
             <div class="stat-value">${stats.swim_time}<span class="stat-unit"> hr</span></div>
         </div>
 
-        <a href="https://www.flaticon.com/free-animated-icons/bicycle" title="bicycle animated icons">Bicycle animated icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-animated-icons" title="animated icons">Animated icons created by Freepik - Flaticon</a>
     `;
 }
 

@@ -1,6 +1,10 @@
 {
   "ride_dist": "682",
   "ride_time": "51.8",
+  "ride_elev": "17877",
   "run_dist": "3",
-  "run_time": "0.5"
+  "run_time": "0.5",
+  "run_elev": "66",
+  "swim_dist": "0.0",
+  "swim_time": "0.0"
 }
