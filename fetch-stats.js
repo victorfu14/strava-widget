@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // This script runs on a server (GitHub Actions), not in the browser.
 // It's safe to use secrets here, as they are loaded from environment variables.
 
@@ -57,12 +59,21 @@ async function main() {
         console.log("Fetching Strava stats...");
         const stats = await getStravaStats(accessToken);
 
-        // Process the stats (convert from meters to miles, seconds to hours)
+        // Process the stats (convert from meters to miles/ft, seconds to hours)
         const processedStats = {
+            // Rides
             ride_dist: (stats.ytd_ride_totals.distance / 1609.34).toFixed(0),
             ride_time: (stats.ytd_ride_totals.moving_time / 3600).toFixed(1),
+            ride_elev: (stats.ytd_ride_totals.elevation_gain * 3.28084).toFixed(0),
+
+            // Runs
             run_dist: (stats.ytd_run_totals.distance / 1609.34).toFixed(0),
-            run_time: (stats.ytd_run_totals.moving_time / 3600).toFixed(1)
+            run_time: (stats.ytd_run_totals.moving_time / 3600).toFixed(1),
+            run_elev: (stats.ytd_run_totals.elevation_gain * 3.28084).toFixed(0),
+
+            // Swims (Strava provides distance in meters)
+            swim_dist: (stats.ytd_swim_totals.distance / 1000).toFixed(1), // Converted to km
+            swim_time: (stats.ytd_swim_totals.moving_time / 3600).toFixed(1)
         };
 
         // Save the stats to a public JSON file

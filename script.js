@@ -20,10 +20,10 @@ async function fetchStats() {
 function displayStats(stats) {
     const container = document.getElementById('stats-container');
 
-    // We can format the data however we want,
-    // because our backend script already did the math.
+    // Generate the HTML for our new stats, now with icons!
     container.innerHTML = `
         <div class="stat">
+            <img src="img/cycling.gif" class="stat-icon" alt="Cycling icon">
             <div class="stat-label">Ride Distance</div>
             <div class="stat-value">${stats.ride_dist}<span class="stat-unit"> mi</span></div>
         </div>
@@ -32,6 +32,14 @@ function displayStats(stats) {
             <div class="stat-value">${stats.ride_time}<span class="stat-unit"> hr</span></div>
         </div>
         <div class="stat">
+            <div class="stat-label">Ride Elevation</div>
+            <div class="stat-value">${stats.ride_elev}<span class="stat-unit"> ft</span></div>
+        </div>
+        
+        <hr style="border:0; border-top: 1px solid #eee; margin: 20px 0;">
+
+        <div class="stat">
+            <img src="img/running.gif" class="stat-icon" alt="Running icon">
             <div class="stat-label">Run Distance</div>
             <div class="stat-value">${stats.run_dist}<span class="stat-unit"> mi</span></div>
         </div>
@@ -39,6 +47,24 @@ function displayStats(stats) {
             <div class="stat-label">Run Time</div>
             <div class="stat-value">${stats.run_time}<span class="stat-unit"> hr</span></div>
         </div>
+        <div class="stat">
+            <div class="stat-label">Run Elevation</div>
+            <div class="stat-value">${stats.run_elev}<span class="stat-unit"> ft</span></div>
+        </div>
+        
+        <hr style="border:0; border-top: 1px solid #eee; margin: 20px 0;">
+
+        <div class="stat">
+            <img src=""img/swimming.gif" class="stat-icon" alt="Swimming icon">
+            <div class="stat-label">Swim Distance</div>
+            <div class="stat-value">${stats.swim_dist}<span class="stat-unit"> km</span></div>
+        </div>
+        <div class="stat">
+            <div class="stat-label">Swim Time</div>
+            <div class="stat-value">${stats.swim_time}<span class="stat-unit"> hr</span></div>
+        </div>
+
+        <a href="https://www.flaticon.com/free-animated-icons/bicycle" title="bicycle animated icons">Bicycle animated icons created by Freepik - Flaticon</a>
     `;
 }
 
