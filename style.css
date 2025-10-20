@@ -1,0 +1,114 @@
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    display: grid; 
+    place-items: center; 
+    min-height: 100vh; 
+    background-color: #f0f2f5; 
+    margin: 0; 
+}
+.widget { 
+    background: #ffffff; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    padding: 24px; 
+    /* Make widget wider to fit horizontal stats */
+    width: 90%;
+    max-width: 800px; /* Max width on desktop */
+    text-align: center; 
+}
+.widget h2 { 
+    margin: 0 0 20px 0; 
+    color: #333; 
+}
+.loading { 
+    font-size: 1.2em; 
+    color: #888; 
+}
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 4px;
+}
+
+/* --- FLEXBOX STYLES --- */
+
+#stats-container {
+    display: flex;
+    flex-direction: row; /* This makes it horizontal */
+    justify-content: space-around; /* Space out the groups */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping on small-medium screens */
+}
+
+.stat-group {
+    display: flex;
+    flex-direction: column; /* Stack stats vertically inside the group */
+    align-items: center;
+    min-width: 160px; /* Give each group a minimum width */
+    margin: 10px;
+}
+
+.stat { 
+    margin: 10px 0;
+}
+.stat-label { 
+    font-size: 0.9em; 
+    color: #666; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+}
+.stat-value { 
+    font-size: 2.2em; 
+    font-weight: 700; 
+    color: #fc5200; 
+    margin-top: 4px; 
+}
+.stat-unit { 
+    font-size: 1em; 
+    color: #fc5200; 
+    margin-left: 2px; 
+}
+
+/* --- MEDIA QUERY FOR PHONES --- */
+
+@media (max-width: 600px) {
+    #stats-container {
+        flex-direction: column; /* Stack groups vertically on mobile */
+        align-items: center;
+    }
+
+    .widget {
+        width: 85%; /* Use a bit less width on mobile */
+    }
+    
+    .stat-group {
+        /* Add a border between groups on mobile */
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .stat-group:last-child {
+        /* Remove border from the last group */
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+.profile-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background-color: #fc5200; /* Strava Orange */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.profile-link:hover {
+    background-color: #e04a00; /* Darker orange */
+}
