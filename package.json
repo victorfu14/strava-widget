@@ -1,0 +1,12 @@
+{
+  "name": "strava-stats-fetcher",
+  "version": "1.0.0",
+  "description": "Fetches Strava stats for a static widget",
+  "main": "fetch-stats.js",
+  "scripts": {
+    "start": "node fetch-stats.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
