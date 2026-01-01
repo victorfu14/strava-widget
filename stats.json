@@ -8,8 +8,8 @@
   "run_elev": "121",
   "swim_dist": "0.0",
   "swim_time": "0.0",
-  "hike_dist": "47",
-  "hike_time": "23.8",
-  "hike_elev": "11490",
-  "other_time": "5.6"
+  "hike_dist": "0",
+  "hike_time": "0.0",
+  "hike_elev": "0",
+  "other_time": "0.0"
 }
